@@ -1,38 +1,224 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: #f2f3ee;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  display: grid;
+  background-color: rgb(255, 102, 89);
+  max-height: 10vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  align-items: center;
+  padding-left: 2rem;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.home-view{
+  min-height:90vh;
+  
+}
+.dropdown{
+  background-color: rgb(255, 102, 89);
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  border-color: #ffffff;
+  border-radius: 7px;
+  color: #ffffff;
+}
+.dropdown-form{
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 2px;
+  border: 1px solid #000000;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer{
+  min-height: 10vh;
+  min-width: 100%;
+  background-color: black;
+  bottom:0;
+  position:fixed;
+  display: flex;
+  color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+}
+.card{
+  margin: 5rem;
+  background-color: #ffffff;
+  border-radius: 2px;
+  border: 1px solid #ffffff;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+  max-height:inherit ;
+  max-width: inherit;
+  margin-bottom: 5rem;
+  
+}
+
+.card-home-view{
+  display: grid;
+  grid-template-areas: 'selector-country image-weather';
+  grid-auto-columns: 50% 50%;
+  max-height:inherit;
+  min-width:inherit ;
+  background-color: #f2f3ee;
+}
+.selector-country{
+  grid-area:selector-country;
+  color: white;
+}
+.image-weather{
+  grid-area:image-weather;
+  color: white;
+}
+.image-card{
+ display: grid;
+ grid-template-areas: 
+ "country img"
+ "city img"
+ "date-time img"
+ "description img"
+ "temp img"
+ "temp img"
+ "tempF wind";
+ grid-auto-rows: auto auto;
+ padding-left: 10%;
+ padding-right: 5%;
+ max-height:inherit;
+ min-width:inherit ;
+}
+.country{
+  margin-top:1rem ;
+  color: #949494;
+  grid-area:country;
+}
+.img{
+  min-height: 50%;
+  min-width: 50%;
+  grid-area: img;
+}
+.city{
+  margin: 0;
+  color:#949494;
+  grid-area: city;
+}
+.date-time{
+  margin: 0;
+  font-size: 300%;
+  color: #000000;
+  grid-area: date-time;
+}
+.temp{
+  font-size: 50px;
+  color: #000000;
+  grid-area:temp;
+  font-weight: 700;
+  margin: 0;
+}
+.precip{
+  margin: 0px;
+  font-size:15px;
+  color: #000000;
+  grid-area:precip;
+  word-break: normal;
+}
+.rh{
+  font-size: 15px;
+  margin: 0px;
+  color: #000000;
+  grid-area:rh;
+}
+.wind{
+  font-size: 15px;
+  margin: 0px;
+  color: #000000;
+  grid-area: wind;
+}
+.tempF{
+  color: #000000;
+  grid-area: tempF;
+}
+.description{
+  font-size: 150%;
+  margin: 0;
+  color: #000000;
+  grid-area:description;
+}
+.report{
+  text-align: center;
+  color: navy;
+  font-size:28px;
+}
+.card-inputs{
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 5%;
+  padding-top: 1rem;
+  font-size: 22px;
+}
+.button-input{
+  text-align: center;
+  margin-left: 10%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 78%;
+  height: 3rem;
+  font-size: 22px;
+  background-color: rgb(255, 102, 89);
+  border-color: #ffffff;
+  border-radius: 0px;
+  border-width: 0;
+  color: #ffffff;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+}
+.button-login{
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 93%;
+  height: 3rem;
+  font-size: 15px;
+  background-color: rgb(255, 102, 89);
+  border-color: #ffffff;
+  border-radius: 0px;
+  border-width: 0;
+  color: #ffffff;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+}
+@media only screen and (max-width: 970px) {
+  .card-home-view{
+    display: grid;
+    grid-template-areas: 'selector-country'' image-weather';
+    grid-auto-columns: 100%;
+    max-height:inherit;
+    min-width:inherit ;
+    background-color: #f2f3ee;
   }
-  to {
-    transform: rotate(360deg);
+  .card{
+    margin: .5rem;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+    max-height:inherit ;
+    max-width: inherit;
+    min-width: 350px;
+    margin-bottom: .5rem;
+    
+  }
+  .footer{
+    min-height: 10vh;
+    min-width: 100%;
+    background-color: black;
+    bottom:0;
+    position:inherit;
+    display: flex;
+    color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
   }
 }
