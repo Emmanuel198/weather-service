@@ -45,16 +45,15 @@ _Para ejecutar este proyecto es necesario contar con [Docker](https://docs.docke
    
     2. El valor para  REACT_APP_WEATHER_API_KEY se obtiene registrandose en la pagina de [weatherbit API](https://www.weatherbit.io/account/create)
    
-   
+
 3. Ejecutar
    ```sh
-    docker build -t servicio-clima/weather-service:latest .
-    docker run --rm -d -p 8081:80 servicio-clima/weather-service:latest
+   1. npm i
+   2. docker build -t servicio-clima/weather-service:latest .
+   3. docker run --rm -d -p 8081:80 servicio-clima/weather-service:latest
    ```
    
 4. En su navegador acceder a `http://localhost:8081`
-   
-
 
 ## Construido con 
 
